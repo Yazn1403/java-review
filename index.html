@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS1701T • Comprehensive Java Review & Exam Engine</title>
+    <title>CS1701T • Comprehensive Java Midterm Master Portal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #0b0f19; color: #f1f5f9; }
+        body { font-family: 'Cairo', sans-serif; background-color: #080c14; color: #f1f5f9; }
         code, pre, .en-text { font-family: 'Fira Code', monospace; direction: ltr; text-align: left; }
         .custom-scroll::-webkit-scrollbar { width: 6px; }
-        .custom-scroll::-webkit-scrollbar-track { background: #0b0f19; }
+        .custom-scroll::-webkit-scrollbar-track { background: #080c14; }
         .custom-scroll::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
     </style>
 </head>
 <body class="flex flex-col md:flex-row min-h-screen custom-scroll">
 
     <!-- Sidebar Navigation -->
-    <aside class="w-full md:w-80 bg-[#111827] border-b md:border-b-0 md:border-l border-slate-800 p-5 flex flex-col justify-between md:fixed md:h-screen z-50 shadow-2xl">
+    <aside class="w-full md:w-80 bg-[#0f172a] border-b md:border-b-0 md:border-l border-slate-800 p-5 flex flex-col justify-between md:fixed md:h-screen z-50 shadow-2xl">
         <div>
             <div class="mb-6 pb-4 border-b border-slate-800">
                 <span class="text-[10px] font-black uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">UMM AL-QURA UNIVERSITY</span>
-                <h1 class="text-lg font-black text-white mt-2">CS1701T • Master Java</h1>
-                <p class="text-xs text-slate-400 mt-0.5">الشرح التفصيلي وبنك الاختبارات الشامل</p>
+                <h1 class="text-xl font-black text-white mt-2">CS1701T • Master Java</h1>
+                <p class="text-xs text-slate-400 mt-0.5">الملخص الضخم وبنك الأسئلة المتكامل</p>
             </div>
 
             <nav class="space-y-1.5 text-xs font-bold">
@@ -30,10 +30,10 @@
                     <span class="ml-3 text-base">📊</span> لوحة التحكم الرئيسية
                 </button>
                 <button onclick="switchView('lec1')" id="nav-lec1" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800/80 transition">
-                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 ml-3"></span> Unit 1: Intro & Java Architecture
+                    <span class="w-2.5 h-2.5 rounded-full bg-blue-500 ml-3"></span> Unit 1: Java Intro & Ecosystem
                 </button>
                 <button onclick="switchView('lec2')" id="nav-lec2" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800/80 transition">
-                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 ml-3"></span> Unit 2: Algorithms & Error Types
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 ml-3"></span> Unit 2: Algorithms, Flowcharts & Errors
                 </button>
                 <button onclick="switchView('lec3')" id="nav-lec3" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800/80 transition">
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 ml-3"></span> Unit 3: Variables & Primitive Types
@@ -42,13 +42,13 @@
                     <span class="w-2.5 h-2.5 rounded-full bg-amber-500 ml-3"></span> Unit 4: Expressions & Type Casting
                 </button>
                 <button onclick="switchView('lec5')" id="nav-lec5" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-slate-300 hover:bg-slate-800/80 transition">
-                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500 ml-3"></span> Unit 5: Scanner & Printf Output
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500 ml-3"></span> Unit 5: Scanner & Printf I/O
                 </button>
                 
                 <div class="pt-3 border-t border-slate-800 my-2"></div>
 
                 <button onclick="switchView('quiz-studio')" id="nav-quiz-studio" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-emerald-300 bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500/20 transition">
-                    <span class="ml-3 text-base">⚙️</span> Quiz Studio (الكويزات الفردية)
+                    <span class="ml-3 text-base">⚙️</span> Quiz Studio (الكويزات الفردية 20)
                 </button>
                 <button onclick="switchView('full-exam')" id="nav-full-exam" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl text-purple-300 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/40 hover:from-purple-600/30 transition">
                     <span class="ml-3 text-base">🏆</span> Full Midterm Exam (اختبار الـ 40)
@@ -57,7 +57,7 @@
         </div>
 
         <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-500 text-center font-semibold">
-            CS1701T • UQU Course Review
+            CS1701T • UQU Computer Programming
         </div>
     </aside>
 
@@ -66,54 +66,73 @@
 
         <!-- VIEW: DASHBOARD -->
         <div id="view-dashboard" class="view-section space-y-6">
-            <div class="bg-gradient-to-r from-blue-900/60 via-slate-900 to-indigo-950 p-6 md:p-8 rounded-3xl border border-blue-500/30 shadow-2xl relative overflow-hidden">
-                <span class="text-xs font-black text-emerald-400 uppercase bg-emerald-400/10 px-3 py-1 rounded-md border border-emerald-400/20">CS1701T • Full Syllabus Engine</span>
-                <h2 class="text-2xl md:text-3xl font-black text-white mt-3">المرجع الشامل لمادة البرمجة بلغة جافا</h2>
+            <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 p-6 md:p-8 rounded-3xl border border-blue-500/30 shadow-2xl relative overflow-hidden">
+                <span class="text-xs font-black text-emerald-400 uppercase bg-emerald-400/10 px-3 py-1 rounded-md border border-emerald-400/20">CS1701T • Master Syllabus Portal</span>
+                <h2 class="text-2xl md:text-3xl font-black text-white mt-3">المنصة الشاملة والأضخم لمراجعة مادة الجافا</h2>
                 <p class="text-slate-300 text-xs md:text-sm mt-2 max-w-2xl leading-relaxed">
-                    منصة مراجعة تفاعلية تجمع بين الشرح التفصيلي للدروس، الأكواد، الفخاخ، وبنك أسئلة يحتوي كويزات فردية لكل وحدة بـ 20 سؤالاً واختبار منتصف شامل بـ 40 سؤالاً.
+                    شرح مفصل لكافة السلايدات والمفاهيم النظرية والتطبيقية، تشريح الأكواد، رصد الفخاخ الشائعة، وبنك أسئلة ضخم يتضمن كويزات فردية بـ 20 سؤالاً لكل وحدة واختبار منتصف شامل يحتوي على 40 سؤالاً.
                 </p>
             </div>
 
-            <!-- Action Banners -->
-            <div class="grid md:grid-cols-2 gap-4">
-                <div onclick="switchView('full-exam')" class="bg-gradient-to-r from-purple-900/40 to-pink-900/40 p-6 rounded-2xl border border-purple-500/40 cursor-pointer hover:border-purple-400 transition shadow-xl">
-                    <span class="text-xs font-bold text-purple-300 bg-purple-500/20 px-2.5 py-1 rounded">اختبار تجريبي كامل</span>
-                    <h3 class="text-xl font-black text-white mt-2">Midterm Full Exam (40 Questions) 🏆</h3>
-                    <p class="text-xs text-slate-300 mt-1">اختبار يشتمل على 40 سؤالاً متكاملاً تغطي كافة مفاهيم المحاضرات من 1 إلى 5 مع مؤقت ونسبة إنجاز[cite: 1].</p>
+            <!-- Dashboard Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800 text-center shadow-lg">
+                    <span class="text-[11px] text-slate-400 font-bold">عدد الوحدات</span>
+                    <h3 class="text-lg font-black text-white mt-1">5 الوحدات كاملة</h3>
                 </div>
-                <div onclick="switchView('quiz-studio')" class="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-6 rounded-2xl border border-emerald-500/40 cursor-pointer hover:border-emerald-400 transition shadow-xl">
-                    <span class="text-xs font-bold text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded">الكويزات الفردية</span>
-                    <h3 class="text-xl font-black text-white mt-2">Unit Quizzes (20 Qs Each) ⚙️</h3>
-                    <p class="text-xs text-slate-300 mt-1">اختر أي محاضرة بشكل منفصل واختبر نفسك بـ 20 سؤالاً تضمن تمكنك الكامل من السلايدات.</p>
+                <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800 text-center shadow-lg">
+                    <span class="text-[11px] text-slate-400 font-bold">الكويزات الفردية</span>
+                    <h3 class="text-lg font-black text-emerald-400 mt-1">100 سؤال فردي</h3>
+                </div>
+                <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800 text-center shadow-lg">
+                    <span class="text-[11px] text-slate-400 font-bold">الاختبار الشامل</span>
+                    <h3 class="text-lg font-black text-purple-400 mt-1">40 سؤال شامل</h3>
+                </div>
+                <div class="bg-[#0f172a] p-4 rounded-2xl border border-slate-800 text-center shadow-lg">
+                    <span class="text-[11px] text-slate-400 font-bold">نسبة التغطية</span>
+                    <h3 class="text-lg font-black text-amber-400 mt-1">100% من السلايدات</h3>
                 </div>
             </div>
 
-            <!-- Units List -->
             <div class="grid md:grid-cols-2 gap-4">
-                <div onclick="switchView('lec1')" class="bg-[#111827] p-5 rounded-2xl border border-slate-800 hover:border-blue-500/60 cursor-pointer transition shadow-md">
-                    <span class="text-xs font-black text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Unit 1</span>
-                    <h3 class="text-base font-extrabold text-white mt-2">Java Introduction & Architecture</h3>
-                    <p class="text-xs text-slate-400 mt-1">شرح المكونات البرمجية، تشبيه وصفة الطهي، Compilers vs Interpreters، وهرمية JDK/JRE/JVM.</p>
+                <div onclick="switchView('full-exam')" class="bg-gradient-to-r from-purple-900/40 to-pink-900/40 p-6 rounded-2xl border border-purple-500/40 cursor-pointer hover:border-purple-400 transition shadow-xl">
+                    <span class="text-xs font-bold text-purple-300 bg-purple-500/20 px-2.5 py-1 rounded">الاختبار التجريبي الشامل</span>
+                    <h3 class="text-xl font-black text-white mt-2">Full Midterm Exam (40 Questions) 🏆</h3>
+                    <p class="text-xs text-slate-300 mt-1">خض تجربة الاختبار الحقيقي بـ 40 سؤالاً متكاملاً مع مؤقت وتغذية راجعة فورية.</p>
                 </div>
-                <div onclick="switchView('lec2')" class="bg-[#111827] p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/60 cursor-pointer transition shadow-md">
+                <div onclick="switchView('quiz-studio')" class="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-6 rounded-2xl border border-emerald-500/40 cursor-pointer hover:border-emerald-400 transition shadow-xl">
+                    <span class="text-xs font-bold text-emerald-300 bg-emerald-500/20 px-2.5 py-1 rounded">بنك الكويزات الفردية</span>
+                    <h3 class="text-xl font-black text-white mt-2">Quiz Studio (20 Qs Per Unit) ⚙️</h3>
+                    <p class="text-xs text-slate-300 mt-1">تدرب بشكل مستقل على كل وحدة باختبار خاص يتضمن 20 سؤالاً تفصيلياً.</p>
+                </div>
+            </div>
+
+            <!-- Units Quick Grid -->
+            <div class="grid md:grid-cols-2 gap-4">
+                <div onclick="switchView('lec1')" class="bg-[#0f172a] p-5 rounded-2xl border border-slate-800 hover:border-blue-500/60 cursor-pointer transition shadow-md">
+                    <span class="text-xs font-black text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded">Unit 1</span>
+                    <h3 class="text-base font-extrabold text-white mt-2">Java Introduction & Ecosystem</h3>
+                    <p class="text-xs text-slate-400 mt-1">ما هو البرنامج، تشبيه وصفة الطهي، Compilers vs Interpreters، وهرمية JDK/JRE/JVM.</p>
+                </div>
+                <div onclick="switchView('lec2')" class="bg-[#0f172a] p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/60 cursor-pointer transition shadow-md">
                     <span class="text-xs font-black text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">Unit 2</span>
                     <h3 class="text-base font-extrabold text-white mt-2">Algorithms, Flowcharts & Error Types</h3>
-                    <p class="text-xs text-slate-400 mt-1">رموز مخططات التدفق التفصيلية، أخطاء Syntax و Runtime و Logic، وتشريح الكود.</p>
+                    <p class="text-xs text-slate-400 mt-1">خطوات حل المشكلات، الرموز الأربعة لمخططات التدفق، والأخطاء البرمجية الثلاثة.</p>
                 </div>
-                <div onclick="switchView('lec3')" class="bg-[#111827] p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/60 cursor-pointer transition shadow-md">
+                <div onclick="switchView('lec3')" class="bg-[#0f172a] p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/60 cursor-pointer transition shadow-md">
                     <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Unit 3</span>
-                    <h3 class="text-base font-extrabold text-white mt-2">Variables, Primitive Types & Constants</h3>
-                    <p class="text-xs text-slate-400 mt-1">الأنواع الـ 8 بالتفصيل، قواعد تسمية المعرفات Identifiers، وحجز الثوابت final.</p>
+                    <h3 class="text-base font-extrabold text-white mt-2">Variables, Data Types & Constants</h3>
+                    <p class="text-xs text-slate-400 mt-1">أنواع البيانات البدائية الـ 8 بالتفصيل، شروط تسمية Identifiers، وحجز الثوابت final.</p>
                 </div>
-                <div onclick="switchView('lec4')" class="bg-[#111827] p-5 rounded-2xl border border-slate-800 hover:border-amber-500/60 cursor-pointer transition shadow-md">
+                <div onclick="switchView('lec4')" class="bg-[#0f172a] p-5 rounded-2xl border border-slate-800 hover:border-amber-500/60 cursor-pointer transition shadow-md">
                     <span class="text-xs font-black text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Unit 4</span>
                     <h3 class="text-base font-extrabold text-white mt-2">Expressions, Casting & Operators</h3>
                     <p class="text-xs text-slate-400 mt-1">توافق التعيين، التحويل القسري Type Casting، ترتيب الأولويات الحسابية، والزيادة والنقصان.</p>
                 </div>
-                <div onclick="switchView('lec5')" class="bg-[#111827] p-5 rounded-2xl border border-slate-800 hover:border-rose-500/60 cursor-pointer transition shadow-md md:col-span-2">
+                <div onclick="switchView('lec5')" class="bg-[#0f172a] p-5 rounded-2xl border border-slate-800 hover:border-rose-500/60 cursor-pointer transition shadow-md md:col-span-2">
                     <span class="text-xs font-black text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded">Unit 5</span>
-                    <h3 class="text-base font-extrabold text-white mt-2">Scanner Class & Formatted Printf Output</h3>
-                    <p class="text-xs text-slate-400 mt-1">طرق الإدخال بـ Scanner، الشرح العميق لفخ nextLine العالق، وتنسيق الأرقام بـ printf[cite: 3].</p>
+                    <h3 class="text-base font-extrabold text-white mt-2">Scanner Class & Formatted Output</h3>
+                    <p class="text-xs text-slate-400 mt-1">طرق الإدخال بـ Scanner، التحليل العميق لفخ nextLine العالق، وتنسيق المخرجات بـ printf.</p>
                 </div>
             </div>
         </div>
@@ -121,20 +140,19 @@
         <!-- VIEW: LECTURE 1 -->
         <div id="view-lec1" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div><span class="text-xs font-black text-blue-400">UNIT 01 - LECTURE SLIDES REVIEW</span><h2 class="text-xl font-black text-white">Java Introduction & Architecture</h2></div>
-                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← العودة للرئيسية</button>
+                <div><span class="text-xs font-black text-blue-400">UNIT 01 - SLIDES COMPREHENSIVE REVIEW</span><h2 class="text-xl font-black text-white">Java Introduction & Ecosystem</h2></div>
+                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← الرئيسية</button>
             </div>
 
-            <!-- Detailed Slide Content -->
-            <div class="bg-[#111827] border-2 border-emerald-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border-2 border-emerald-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-emerald-400 text-sm block">1. مفهوم البرنامج وتشبيهه بسلايدات المقرر (Concept of a Program)</span>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    البرنامج في أصله هو <span class="en-text text-white font-bold">set of instructions</span> يوجه حاسوبك لأداء مهام وإنتاج مخرجات. تشرح السلايدات مفهوم البرنامج بتشبهيه بدقة بـ <span class="text-amber-300 font-bold">وصفة الطهي (Recipe)</span>:
+                    البرنامج في أصله هو <span class="en-text text-white font-bold">set of instructions</span> يوجه الحاسوب لأداء المهام وإنتاج المخرجات المطلوبة. تشرح السلايدات هذا المفهوم بتشبهيه بدقة بـ <span class="text-amber-300 font-bold">وصفة الطهي (Recipe)</span>:
                 </p>
                 <div class="grid md:grid-cols-2 gap-3 text-xs">
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-1">
                         <span class="text-blue-400 font-bold block">المكونات Ingredients</span>
-                        <p class="text-slate-400">تطابق المتغيرات <span class="en-text text-white">Variables</span> التي تخزن القسيم بالذاكرة.</p>
+                        <p class="text-slate-400">تطابق المتغيرات <span class="en-text text-white">Variables</span> التي تخزن البيانات بالذاكرة.</p>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-1">
                         <span class="text-blue-400 font-bold block">خطوات التحضير Directions</span>
@@ -143,12 +161,12 @@
                 </div>
             </div>
 
-            <div class="bg-[#111827] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-blue-400 text-sm block">2. الفرق الدقيق بين المترجم والمفسر (Compiler vs Interpreter)</span>
                 <div class="grid md:grid-cols-2 gap-4 text-xs">
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
                         <strong class="text-amber-400 text-sm block">Java Compiler (javac)</strong>
-                        <p class="text-slate-300">يقوم بمسح وترجمة ملف المصدر بالكامل <code class="text-emerald-400">.java</code> دفعة واحدة قبل بدء التنفيذ. ينتج ملف البايت كود الوسيط <code class="text-emerald-400">.class</code>.</p>
+                        <p class="text-slate-300">يقوم بمسح وترجمة ملف المصدر بالكامل <code class="text-emerald-400">.java</code> دفعة واحدة قبل بدء التنفيذ، وينتج ملف البايت كود الوسيط <code class="text-emerald-400">.class</code>.</p>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2">
                         <strong class="text-amber-400 text-sm block">Java Interpreter (JVM)</strong>
@@ -157,12 +175,12 @@
                 </div>
             </div>
 
-            <div class="bg-[#111827] border-2 border-indigo-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border-2 border-indigo-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-indigo-400 text-sm block">3. مكونات بيئة التشغيل والتطوير (JDK vs JRE vs JVM)</span>
                 <div class="space-y-3 text-xs">
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
                         <span class="font-bold text-white en-text">1. JVM (Java Virtual Machine):</span>
-                        <p class="text-slate-400 mt-1">البيئة الافتراضية المقيدة المسؤولة عن تنفيذ الـ Bytecode على المعالج.</p>
+                        <p class="text-slate-400 mt-1">البيئة الافتراضية المسؤولة عن تنفيذ الـ Bytecode على المعالج وتوفر ميزة Write Once, Run Anywhere.</p>
                     </div>
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
                         <span class="font-bold text-white en-text">2. JRE (Java Runtime Environment) = JVM + Class Libraries:</span>
@@ -170,7 +188,7 @@
                     </div>
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
                         <span class="font-bold text-white en-text">3. JDK (Java Development Kit) = JRE + Development Tools (javac):</span>
-                        <p class="text-slate-400 mt-1">الحزمة الكاملة الموجهة للمبرمجين وتحوي المترجم (javac) وأدوات البناء.</p>
+                        <p class="text-slate-400 mt-1">الحزمة الكاملة الموجهة للمبرمجين وتحوي المترجم (javac) وأدوات التطوير والبناء.</p>
                     </div>
                 </div>
             </div>
@@ -179,12 +197,11 @@
         <!-- VIEW: LECTURE 2 -->
         <div id="view-lec2" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div><span class="text-xs font-black text-indigo-400">UNIT 02 - LECTURE SLIDES REVIEW</span><h2 class="text-xl font-black text-white">Algorithms, Flowcharts & Errors</h2></div>
-                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← العودة للرئيسية</button>
+                <div><span class="text-xs font-black text-indigo-400">UNIT 02 - SLIDES COMPREHENSIVE REVIEW</span><h2 class="text-xl font-black text-white">Algorithms, Flowcharts & Error Types</h2></div>
+                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← الرئيسية</button>
             </div>
 
-            <!-- Flowchart Detailed -->
-            <div class="bg-[#111827] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-indigo-400 text-sm block">1. رموز مخططات التدفق المعرفية (Flowchart Symbols)</span>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 text-center">
@@ -206,8 +223,7 @@
                 </div>
             </div>
 
-            <!-- Errors Detailed -->
-            <div class="bg-[#111827] border-2 border-rose-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border-2 border-rose-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-rose-400 text-sm block">2. الشرح العميق لأنواع الأخطاء البرمجية الثلاثة (Types of Errors)</span>
                 <div class="space-y-3 text-xs">
                     <div class="bg-slate-900 p-4 rounded-xl border border-rose-500/20 space-y-1">
@@ -232,12 +248,11 @@
         <!-- VIEW: LECTURE 3 -->
         <div id="view-lec3" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div><span class="text-xs font-black text-emerald-400">UNIT 03 - LECTURE SLIDES REVIEW</span><h2 class="text-xl font-black text-white">Variables, Primitive Types & Constants</h2></div>
-                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← العودة للرئيسية</button>
+                <div><span class="text-xs font-black text-emerald-400">UNIT 03 - SLIDES COMPREHENSIVE REVIEW</span><h2 class="text-xl font-black text-white">Variables, Primitive Types & Constants</h2></div>
+                <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← الرئيسية</button>
             </div>
 
-            <!-- Primitive Types Table -->
-            <div class="bg-[#111827] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-emerald-400 text-sm block">أنواع البيانات البدائية الـ 8 (Java Primitive Data Types)</span>
                 <div class="overflow-x-auto">
                     <table class="w-full text-xs text-right border-collapse">
@@ -246,7 +261,7 @@
                                 <th class="p-2.5 border-l border-slate-800">Type</th>
                                 <th class="p-2.5 border-l border-slate-800">Size in Memory</th>
                                 <th class="p-2.5 border-l border-slate-800">Category</th>
-                                <th class="p-2.5">Range / Values</th>
+                                <th class="p-2.5">Range / Details</th>
                             </tr>
                         </thead>
                         <tbody class="text-slate-300 font-mono divide-y divide-slate-800">
@@ -263,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="bg-[#111827] border-2 border-emerald-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border-2 border-emerald-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-emerald-400 text-sm block">شروط تسمية المعرفات والثوابت (Identifiers & Final)</span>
                 <div class="space-y-3 text-xs">
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
@@ -282,11 +297,11 @@
         <!-- VIEW: LECTURE 4 -->
         <div id="view-lec4" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div><span class="text-xs font-black text-amber-400">UNIT 04 - LECTURE SLIDES REVIEW</span><h2 class="text-xl font-black text-white">Expressions, Casting & Precedence</h2></div>
+                <div><span class="text-xs font-black text-amber-400">UNIT 04 - SLIDES COMPREHENSIVE REVIEW</span><h2 class="text-xl font-black text-white">Expressions, Casting & Operators</h2></div>
                 <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← العودة للرئيسية</button>
             </div>
 
-            <div class="bg-[#111827] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-amber-400 text-sm block">التوافق والتحويل القسري (Assignment Compatibility & Type Casting)</span>
                 <div class="space-y-3 text-xs">
                     <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800">
@@ -303,7 +318,7 @@ int roundedAvg = (int)avg; // roundedAvg = 9</pre>
                 </div>
             </div>
 
-            <div class="bg-[#111827] border-2 border-amber-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border-2 border-amber-500/50 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-amber-400 text-sm block">ترتيب أولويات العمليات الحسابية (Precedence Rules)</span>
                 <ol class="text-xs text-slate-300 space-y-2 list-decimal list-inside bg-slate-900 p-4 rounded-xl border border-slate-800">
                     <li><strong class="text-white">الأقواس Parentheses ():</strong> تُحسب أولاً من الداخل للخارج.</li>
@@ -317,7 +332,7 @@ int roundedAvg = (int)avg; // roundedAvg = 9</pre>
         <!-- VIEW: LECTURE 5 -->
         <div id="view-lec5" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div><span class="text-xs font-black text-rose-400">UNIT 05 - LECTURE SLIDES REVIEW</span><h2 class="text-xl font-black text-white">Scanner & Printf Formatting</h2></div>
+                <div><span class="text-xs font-black text-rose-400">UNIT 05 - SLIDES COMPREHENSIVE REVIEW</span><h2 class="text-xl font-black text-white">Scanner & Printf Formatting</h2></div>
                 <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← العودة للرئيسية</button>
             </div>
 
@@ -328,7 +343,7 @@ int roundedAvg = (int)avg; // roundedAvg = 9</pre>
                 <div class="bg-slate-900 p-4 rounded-xl border border-rose-500/30 text-xs space-y-2">
                     <p class="text-slate-200 font-bold">لماذا يحدث هذا الفخ في الاختبارات؟</p>
                     <p class="text-slate-300 leading-relaxed">
-                        عند قراءة عدد بـ <code class="text-amber-300">nextInt()</code>، يقرأ Scanner الأرقام فقط ويترك زر الإدخال <code class="text-rose-400">'\n'</code> عائماً في الذاكرة المؤقتة. وعند استدعاء <code class="text-amber-300">nextLine()</code> بعدها، تقرأ هذا الرمز فوراً وتعتبر أن النص فارغ دون انتظار إدخال المبرمج[cite: 8, 9]!
+                        عند قراءة عدد بـ <code class="text-amber-300">nextInt()</code>، يقرأ Scanner الأرقام فقط ويترك زر الإدخال <code class="text-rose-400">'\n'</code> عائماً في الذاكرة المؤقتة. وعند استدعاء <code class="text-amber-300">nextLine()</code> بعدها، تقرأ هذا الرمز فوراً وتعتبر أن النص فارغ دون انتظار إدخال المبرمج!
                     </p>
                 </div>
                 <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs space-y-2">
@@ -340,7 +355,7 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
                 </div>
             </div>
 
-            <div class="bg-[#111827] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+            <div class="bg-[#0f172a] border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
                 <span class="font-black text-rose-400 text-sm block">جدول محددات التنسيق المتقدمة System.out.printf()</span>
                 <div class="overflow-x-auto">
                     <table class="w-full text-xs text-right border-collapse">
@@ -370,7 +385,7 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
                 <button onclick="switchView('dashboard')" class="text-xs bg-slate-800 px-3 py-1.5 rounded-xl text-slate-300 font-bold">← الرئيسية</button>
             </div>
 
-            <div class="bg-[#111827] p-6 rounded-2xl border border-slate-800 space-y-4">
+            <div class="bg-[#0f172a] p-6 rounded-2xl border border-slate-800 space-y-4">
                 <span class="font-bold text-white text-sm block">اختر المحاضرة لبدء كويز الـ 20 سؤالاً التفاعلي:</span>
                 <div class="flex flex-wrap gap-2 text-xs font-bold" id="unit-quiz-selector">
                     <button onclick="loadUnitQuiz(1)" class="px-4 py-2 bg-blue-600 rounded-xl text-white">Unit 1 Quiz</button>
@@ -381,12 +396,12 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
                 </div>
 
                 <div id="unit-quiz-display" class="space-y-4 pt-4 border-t border-slate-800">
-                    <!-- Questions will render dynamically here -->
+                    <!-- Questions Render Engine -->
                 </div>
             </div>
         </div>
 
-        <!-- VIEW: FULL MIDTERM EXAM (40 QUESTIONS) -->
+        <!-- VIEW: FULL MIDTERM EXAM (40 DETAILED QUESTIONS) -->
         <div id="view-full-exam" class="view-section hidden space-y-6">
             <div class="flex justify-between items-center border-b border-slate-800 pb-4">
                 <div><span class="text-xs font-black text-purple-400">MIDTERM FULL EXAM</span><h2 class="text-xl font-black text-white">اختبار المنتصف الشامل (40 سؤالاً)</h2></div>
@@ -396,8 +411,8 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
             <div class="bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-950 border-2 border-purple-500/50 p-6 rounded-2xl space-y-6 shadow-2xl">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <div>
-                        <h3 class="font-black text-purple-300 text-lg">Full Midterm Quiz (Units 1 - 5)</h3>
-                        <p class="text-xs text-slate-400 mt-0.5">شامل لكافة موضوعات المنهج بنفس صيغة أسئلة اختبارات جامعة أم القرى[cite: 1]</p>
+                        <h3 class="font-black text-purple-300 text-lg">Full Midterm Exam (Units 1 - 5)</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">شامل لكافة موضوعات المنهج بنفس صيغة أسئلة اختبارات جامعة أم القرى</p>
                     </div>
                     <span class="text-xs bg-purple-500/20 text-purple-300 px-3 py-1.5 rounded-full font-mono font-bold">⏳ 60 دقيقة</span>
                 </div>
@@ -410,9 +425,123 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
 
     </main>
 
-    <!-- Interactive Quiz & Exam Script Engine -->
+    <!-- Quiz Data & Script Engine -->
     <script>
-        // Navigation Logic
+        // Questions Database
+        const unitQuestionsDB = {
+            1: [
+                { q: "ما هو التعريف المعتمد للبرنامج في جافا؟", opts: ["Set of instructions", "CPU register", "Operating System", "RAM memory"], ans: 0 },
+                { q: "المكون الذي يترجم السورس كود بالكامل إلى Bytecode هو:", opts: ["JVM", "javac (Java Compiler)", "JRE", "OS"], ans: 1 },
+                { q: "الملف الذي ينتجه المترجم بعد عملية الترجمة الناجحة يحمل امتداد:", opts: [".java", ".class", ".exe", ".cpp"], ans: 1 },
+                { q: "يتكون JRE من JVM إضافة إلى:", opts: ["Compiler", "Class Libraries", "Hardware", "Operating System"], ans: 1 },
+                { q: "يتكون JDK من JRE إضافة إلى:", opts: ["Class Libraries", "Development Tools (javac)", "JVM only", "Bytecode"], ans: 1 },
+                { q: "تشبه السلايدات المتغيرات Variables في البرنامج بـ:", opts: ["Directions", "Ingredients", "Oven", "Chef"], ans: 1 },
+                { q: "المراد بـ Write Once, Run Anywhere هو بفضل وجود:", opts: ["JDK", "JVM", "C++", "Hardware"], ans: 1 },
+                { q: "اللغات القريبة من فهم الآلة وتتكون من 0s و 1s تسمى:", opts: ["High-Level", "Machine Language", "Java", "Python"], ans: 1 },
+                { q: "المفسر Interpreter ينفذ البايت كود بأسلوب:", opts: ["دفعة واحدة", "سطراً بسطر", "عشوائي", "لا ينفذه"], ans: 1 },
+                { q: "أي المكونات التالية يلزم المطور لكتابة وتطوير كود جافا جديد؟", opts: ["JRE", "JDK", "JVM فقط", "Browser"], ans: 1 },
+                { q: "امتداد ملف السورس كود الأصلي قبل الترجمة هو:", opts: [".class", ".java", ".txt", ".bin"], ans: 1 },
+                { q: "ما هي المهمة الأساسية للـ JIT Compiler داخل JVM؟", opts: ["تسريع تنفيذ الـ Bytecode", "حذف الكود", "تعديل المتغيرات", "طباعة النصوص"], ans: 0 },
+                { q: "لغة Java تصنف على أنها لغة برمجية من نوع:", opts: ["Low-Level", "High-Level", "Machine Code", "Assembly"], ans: 1 },
+                { q: "شبهت السلايدات الجمل البرمجية Statements بـ:", opts: ["Ingredients", "Directions / Steps", "Salt", "Recipe name"], ans: 1 },
+                { q: "هل تعمل برامج جافا مباشرة على المعالج بدون JVM؟", opts: ["نعم دائماً", "لا، تحتاج JVM لتفسير الـ Bytecode", "نعم في الويندوز فقط", "حسب حجم الكود"], ans: 1 },
+                { q: "أي مما يلي لا يعتبر من مكونات الـ JDK؟", opts: ["javac", "JRE", "JVM", "Microsoft Word"], ans: 3 },
+                { q: "الآلة الافتراضية للجافا هي اختصار لـ:", opts: ["Java Variable Machine", "Java Virtual Machine", "Java Value Mode", "Java Vector Main"], ans: 1 },
+                { q: "تتميز لغة جافا بأنها مستقلة عن منصة التشغيل Platform-Independent بفضل:", opts: ["Bytecode & JVM", "C++ compiler", "Windows", "RAM"], ans: 0 },
+                { q: "الأداة التي تستخدم في السطر الأوامر لترجمة كود جافا هي:", opts: ["java", "javac", "run", "compile"], ans: 1 },
+                { q: "الأداة التي تستخدم لتشغيل ملف .class المترجم هي:", opts: ["javac", "java", "start", "execute"], ans: 1 }
+            ],
+            2: [
+                { q: "الرمز المستخدم لتمثيل البداية والنهاية في Flowchart هو:", opts: ["Rectangle", "Oval", "Diamond", "Parallelogram"], ans: 1 },
+                { q: "الرمز المستخدم لعمليات الإدخال والإخراج Input/Output هو:", opts: ["Oval", "Parallelogram", "Rectangle", "Diamond"], ans: 1 },
+                { q: "الرمز المستخدم للعمليات الحسابية والمعالجة Processing هو:", opts: ["Diamond", "Rectangle", "Oval", "Line"], ans: 1 },
+                { q: "الرمز المستخدم لاتخاذ القرارات والشروط (IF/ELSE) هو:", opts: ["Parallelogram", "Diamond", "Oval", "Rectangle"], ans: 1 },
+                { q: "الخطأ الناجم عن نسيان الفاصلة المنقوطة (;) يعتبر من نوع:", opts: ["Runtime Error", "Syntax Error", "Logic Error", "Hardware Error"], ans: 1 },
+                { q: "الخطأ الناجم عن القسمة على صفر (1/0) أثناء التشغيل يعتبر من نوع:", opts: ["Syntax Error", "Runtime Error", "Logic Error", "Compiler Error"], ans: 1 },
+                { q: "الخطأ الذي لا يوقف البرنامج ولكنه يعطي نتائج حساسية خاطئة هو:", opts: ["Syntax Error", "Runtime Error", "Logic Error", "Grammar Error"], ans: 2 },
+                { q: "أي الأخطاء التالية يكتشفه الـ Compiler ويمنع البناء؟", opts: ["Syntax Error", "Logic Error", "Runtime Error", "User Error"], ans: 0 },
+                { q: "الدالة الرئيسية التي يبدأ منها تنفيذ أي برنامج جافا هي:", opts: ["public void start()", "public static void main(String[] args)", "void main()", "static run()"], ans: 1 },
+                { q: "التعليقات من نوع Documentations تبدأ بـ:", opts: ["//", "/*", "/**", "#"], ans: 2 },
+                { q: "السطر الذي يستورد مكتبات جافا مثل Scanner يبدأ بكلمة:", opts: ["package", "import", "include", "using"], ans: 1 },
+                { q: "اسم الحزمة التي يتبع لها الملف يتم تعريفه باستخدام كلمة:", opts: ["import", "package", "class", "namespace"], ans: 1 },
+                { q: "عند كتابة قانون مساحة المستطيل بجمع الطول والعرض بدلاً من ضربهما، يحدث خطأ:", opts: ["Syntax", "Logic Error", "Runtime", "Fatal"], ans: 1 },
+                { q: "الخطأ الصياغي النحوي يسمى في جافا بـ:", opts: ["Logic Error", "Syntax Error", "Execution Error", "Bug Error"], ans: 1 },
+                { q: "تستمر عملية التنفيذ دون توقف مفاجئ عند وجود خطأ من نوع:", opts: ["Syntax Error", "Logic Error", "Runtime Error", "Compilation Error"], ans: 1 },
+                { q: "أي من الرموز التالية يعبر عن اتجاه التفق بين الخطوات؟", opts: ["Arrows (الأسهم)", "Oval", "Rectangle", "Circle"], ans: 0 },
+                { q: "الجملة System.out.println() تعتبر جملة من نوع:", opts: ["Input Statement", "Output Statement", "Loop Statement", "Class Declaration"], ans: 1 },
+                { q: "تسمى عملية تتبع البرنامج واكتشاف الأخطاء وتصحيحها بـ:", opts: ["Compiling", "Debugging", "Linking", "Executing"], ans: 1 },
+                { q: "تضمين حزمة java.util يتم عبر الجملة:", opts: ["import java.util.*;", "package java.util;", "include java.util;", "using java.util;"], ans: 0 },
+                { q: "كل جملة جافا ينبغي أن تنتهي بـ:", opts: [": (Semicolon)", "; (Semicolon)", ". (Dot)", "Comma"], ans: 1 }
+            ],
+            3: [
+                { q: "حجم نوع البيانات البدائي int في الذاكرة يساوي:", opts: ["1 byte", "2 bytes", "4 bytes", "8 bytes"], ans: 2 },
+                { q: "حجم نوع البيانات البدائي double في الذاكرة يساوي:", opts: ["4 bytes", "8 bytes", "2 bytes", "16 bytes"], ans: 1 },
+                { q: "نوع البيانات البدائي المستخدم لتخزين القيمة true أو false هو:", opts: ["int", "char", "boolean", "String"], ans: 2 },
+                { q: "حجم نوع البيانات char في الذاكرة يساوي:", opts: ["1 byte", "2 bytes", "4 bytes", "8 bytes"], ans: 1 },
+                { q: "النوع الافتراضي المعتمد للأعداد الصحيحة في جافا هو:", opts: ["byte", "short", "int", "long"], ans: 2 },
+                { q: "النوع الافتراضي المعتمد للأعداد العشرية في جافا هو:", opts: ["float", "double", "int", "long"], ans: 1 },
+                { q: "تُعرف الثوابت Named Constants في جافا باستخدام كلمة:", opts: ["const", "final", "static", "define"], ans: 1 },
+                { q: "أي المعرفات التالية يعتبر اسم غير صحيح (Illegal Identifier)؟", opts: ["_total", "$amount", "7eleven", "my_var"], ans: 2 },
+                { q: "هل لغة جافا حساسة لحالة الأحرف (Case-Sensitive)؟", opts: ["نعم", "لا", "فقط في الأرقام", "حسب الإصدار"], ans: 0 },
+                { q: "أي من التالية يعتبر اسم معرف صحيح في جافا؟", opts: ["class", "public", "first_name", "123num"], ans: 2 },
+                { q: "نطاق قيم نوع البيانات byte هو من:", opts: ["-128 to 127", "-32768 to 32767", "0 to 255", "-1 to 1"], ans: 0 },
+                { q: "تُكتب أسماء الثوابت في جافا حسب العرف بـ:", opts: ["lowercase", "UPPERCASE_WITH_UNDERSCORES", "CamelCase", "mixedCase"], ans: 1 },
+                { q: "عدد أنواع البيانات البدائية Primitive Data Types في جافا هو:", opts: ["5", "8", "10", "12"], ans: 1 },
+                { q: "تستخدم الفاصلة العليا المفردة Single Quotes مثل 'A' لتعريف:", opts: ["String", "char", "int", "boolean"], ans: 1 },
+                { q: "أي من أنواع البيانات التالية يستهلك 1 bit فقط؟", opts: ["byte", "boolean", "char", "short"], ans: 1 },
+                { q: "أي المعرفات التالية يعتبر غير صحيح بسبب وجود مسافة؟", opts: ["first_name", "first name", "firstName", "FirstName"], ans: 1 },
+                { q: "نوع البيانات المناسب لتخزين عدد سكان العالم الضخم هو:", opts: ["short", "byte", "int", "long"], ans: 3 },
+                { q: "نوع البيانات المناسب لتخزين نسبة مئوية مع أرقام عشرية دقيقة هو:", opts: ["int", "boolean", "double", "char"], ans: 2 },
+                { q: "الكلمات المحجوزة مثل int و double و class تسمى:", opts: ["Identifiers", "Reserved Keywords", "Constants", "Literals"], ans: 1 },
+                { q: "هل يمكن استخدام الكلمات المحجوزة مثل class كأسرار متغيرات؟", opts: ["نعم دائماً", "لا، يُمنع تماماً", "نعم بشرط إضافة أرقام", "حسب الكلاس"], ans: 1 }
+            ],
+            4: [
+                { q: "تُنفذ العمليات الحسابية في جافا أولاً بناءً على وجود:", opts: ["الجمع", "الأقواس Parentheses", "الضرب", "التعيين"], ans: 1 },
+                { q: "ما هو ناتج عملية القسمة الصحيحة التالية: 9 / 2 ؟", opts: ["4.5", "4", "5", "4.0"], ans: 1 },
+                { q: "ما هو ناتج عملية باقي القسمة Modulus التالية: 9 % 2 ؟", opts: ["1", "4", "4.5", "0"], ans: 0 },
+                { q: "عند تحويل نوع أكبر إلى نوع أصغر قسرياً (Type Casting)، يتم:", opts: ["تقريب الكسر", "قطع الكسر بالكامل (Truncation)", "إضافة أصفار", "مضاعفة الرقم"], ans: 1 },
+                { q: "ما هي قيمة x بعد تنفيذ: int x = (int) 8.99 ؟", opts: ["9", "8", "8.99", "0"], ans: 1 },
+                { q: "تعتبر العملية byte -> short -> int -> long -> double من نوع:", opts: ["Explicit Casting", "Automatic Assignment Compatibility", "Type Error", "Truncation"], ans: 1 },
+                { q: "في التعبير int res = 3 * (++m) حيث m = 4، ما هي قيم res و m؟", opts: ["res=12, m=5", "res=15, m=5", "res=15, m=4", "res=12, m=4"], ans: 1 },
+                { q: "في التعبير int res = 3 * (m++) حيث m = 4، ما هي قيم res و m؟", opts: ["res=12, m=5", "res=15, m=5", "res=12, m=4", "res=15, m=4"], ans: 0 },
+                { q: "المعامل المنطقي && يعطي true في حالة:", opts: ["كلا الشرطين true", "أحد الشرطين true", "كلا الشرطين false", "دائماً"], ans: 0 },
+                { q: "المعامل المنطقي || يعطي true في حالة:", opts: ["كلا الشرطين true فقط", "أحد الشرطين على الأقل true", "كلا الشرطين false", "لا يعطي true"], ans: 1 },
+                { q: "المعامل المنطقي ! يسمى معامل:", opts: ["AND", "OR", "NOT (العكس)", "XOR"], ans: 2 },
+                { q: "أولوية تنفيذ معاملات التعيين (=) تكون في:", opts: ["بداية المعادلة", "نهاية المعادلة", "قبل الأقواس", "مع الضرب"], ans: 1 },
+                { q: "ما ناتج التعبير: 2 + 3 * 4 ؟", opts: ["20", "14", "24", "10"], ans: 1 },
+                { q: "ما ناتج التعبير: (2 + 3) * 4 ؟", opts: ["20", "14", "24", "10"], ans: 0 },
+                { q: "ما ناتج التعبير: 10 % 3 ؟", opts: ["3", "1", "0", "3.33"], ans: 1 },
+                { q: "المعامل ++x يسمى بـ:", opts: ["Postfix Increment", "Prefix Increment", "Prefix Decrement", "Postfix Decrement"], ans: 1 },
+                { q: "المعامل x++ يسمى بـ:", opts: ["Prefix Increment", "Postfix Increment", "Prefix Decrement", "Postfix Decrement"], ans: 1 },
+                { q: "إذا كانت x = 5، فإن تنفيذ x += 3 يجعل قيمة x تساوي:", opts: ["5", "3", "8", "15"], ans: 2 },
+                { q: "أي من المعاملات التالية له أولوية أعلى من الجمع والطرح؟", opts: ["=", "+=", "* (الضرب)", "==="], ans: 2 },
+                { q: "إذا كانت boolean b = true، فإن !b تساوي:", opts: ["true", "false", "1", "null"], ans: 1 }
+            ],
+            5: [
+                { q: "الكلاس المستخدم لقراءة المدخلات من لوحة المفاتيح هو:", opts: ["System.out", "Scanner", "String", "Input"], ans: 1 },
+                { q: "لاستخدام الكلاس Scanner، يلزم استيراد الحزمة:", opts: ["java.lang.Scanner", "java.util.Scanner", "java.io.Scanner", "java.net.Scanner"], ans: 1 },
+                { q: "الدالة المستخدمة لقراءة عدد صحيح int من المستخدم هي:", opts: ["nextDouble()", "nextInt()", "nextLine()", "next()"], ans: 1 },
+                { q: "الدالة المستخدمة لقراءة عدد عشري double من المستخدم هي:", opts: ["nextInt font", "nextDouble()", "nextLine()", "nextFloat()"], ans: 1 },
+                { q: "الدالة التي تقرأ السطر كاملاً حتى زر Enter هي:", opts: ["next()", "nextLine()", "nextInt()", "readString()"], ans: 1 },
+                { q: "الدالة التي تقرأ كلمة واحدة فقط وتتوقف عند المساحة هي:", opts: ["nextLine()", "next()", "read()", "nextWord()"], ans: 1 },
+                { q: "عند قراءة عدد بـ nextInt() ثم قراءة نص بـ nextLine() يظهر فخ سببها:", opts: ["رمز السطر الجديد '\\n' العالق", "نقص الذاكرة", "خطأ في النطاق", "عدم وجود Scanner"], ans: 0 },
+                { q: "الحل المعتمد لعلاج فخ nextLine() العالق هو:", opts: ["إعادة تشغيل الجهاز", "إضافة keyboard.nextLine() لتفريغ الـ '\\n'", "استخدام nextInt() مرتين", "حذف الكود"], ans: 1 },
+                { q: "محدد التنسيق Specifier للأعداد الصحيحة في printf هو:", opts: ["%f", "%d", "%s", "%c"], ans: 1 },
+                { q: "محدد التنسيق Specifier للأعداد العشرية في printf هو:", opts: ["%d", "%f", "%s", "%b"], ans: 1 },
+                { q: "محدد التنسيق Specifier للنصوص Strings في printf هو:", opts: ["%d", "%f", "%s", "%t"], ans: 2 },
+                { q: "في صيغة التنسيق %6.2f، الرقم 2 يشير إلى:", opts: ["عدد الخانات الكلي", "عدد المنازل العشرية بعد الفاصلة", "عدد السطور", "التقريب لأقرب مئة"], ans: 1 },
+                { q: "في صيغة التنسيق %6.2f، الرقم 6 يشير إلى:", opts: ["عرض الحقل الكلي Field Width", "المنازل العشرية", "عدد الصفوف", "نسبة المئوية"], ans: 0 },
+                { q: "الـ Flag (-) في printf يستخدم لـ:", opts: ["تعبئة الأصفار", "المحاذاة لليسار Left-Justify", "إضافة علامة موجب", "حذف الأرقام"], ans: 1 },
+                { q: "الـ Flag (0) في printf يستخدم لـ:", opts: ["المحاذاة لليسار", "تعبئة الخانات الفارغة بالأصفار على اليسار", "طباعة صفر فقط", "مسح الشاشة"], ans: 1 },
+                { q: "ما هو الناتج المطبوع من: System.out.printf(\"%.1f\", 3.14159); ؟", opts: ["3.1", "3.14", "3.14159", "3"], ans: 0 },
+                { q: "لإنشاء كائن Scanner مرتبط بمدخلات الشاشة نكتب:", opts: ["new Scanner(System.out)", "new Scanner(System.in)", "new Scanner(File)", "new Scanner()"], ans: 1 },
+                { q: "لإغلاق كائن الـ Scanner وتحرير الموارد نستخدم الدالة:", opts: ["keyboard.stop()", "keyboard.close()", "keyboard.end()", "keyboard.exit()"], ans: 1 },
+                { q: "رمز السطر الجديد الذي يمكن استخدامه داخل printf للتنقل لسطر جديد هو:", opts: ["\\t", "%n أو \\n", "%s", "%d"], ans: 1 },
+                { q: "طباعة النصوص المحاذية لليمين في printf تعتبر هي المحاذاة:", opts: ["الافتراضية Default", "عند استخدام Flag -", "غير الممكنة", "التلقائية للنصوص فقط"], ans: 0 }
+            ]
+        };
+
+        // Navigation Engine
         function switchView(viewId) {
             document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -431,76 +560,96 @@ String name = keyboard.nextLine(); // قراءة الاسم بنجاح</pre>
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 20 Questions Generator per Unit
+        // Render 20 Questions for specific Unit Quiz
         function loadUnitQuiz(unitNum) {
             const container = document.getElementById('unit-quiz-display');
-            let qHTML = `<h4 class="font-bold text-emerald-400 text-sm mb-4">اختبار الوحدة ${unitNum} الشامل (20 سؤالاً تفاعلياً)</h4>`;
+            const questions = unitQuestionsDB[unitNum];
+            let qHTML = `<h4 class="font-bold text-emerald-400 text-sm mb-4">كويز الوحدة ${unitNum} الشامل (20 سؤالاً حقيقياً)</h4>`;
             
-            for(let i = 1; i <= 20; i++) {
+            questions.forEach((qObj, qIdx) => {
+                const qNum = qIdx + 1;
                 qHTML += `
                     <div class="bg-slate-900 p-4 rounded-xl border border-slate-800 space-y-2 text-xs">
-                        <p class="font-bold text-white">${i}. سؤال نموذجي ${i} للوحدة ${unitNum} بناءً على سلايدات المقرر؟</p>
+                        <p class="font-bold text-white">${qNum}. ${qObj.q}</p>
                         <div class="grid md:grid-cols-2 gap-2 font-mono">
-                            <button onclick="answerUQ(${unitNum}, ${i}, 0, true)" class="uq-${unitNum}-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">A) الخيار الصحيح المعتمد في السلايدات</button>
-                            <button onclick="answerUQ(${unitNum}, ${i}, 1, false)" class="uq-${unitNum}-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">B) خيار مضلل شائع</button>
-                            <button onclick="answerUQ(${unitNum}, ${i}, 2, false)" class="uq-${unitNum}-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">C) إجابة خاطئة</button>
-                            <button onclick="answerUQ(${unitNum}, ${i}, 3, false)" class="uq-${unitNum}-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">D) غير متوافق مع جافا</button>
+                            ${qObj.opts.map((opt, oIdx) => `
+                                <button onclick="answerUQ(${unitNum},${qNum}, ${oIdx},${qObj.ans})" class="uq-${unitNum}-${qNum} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">
+                                    ${String.fromCharCode(65 + oIdx)})${opt}
+                                </button>
+                            `).join('')}
                         </div>
-                        <div id="fb-uq-${unitNum}-${i}" class="hidden font-bold pt-1"></div>
+                        <div id="fb-uq-${unitNum}-${qNum}" class="hidden font-bold pt-1"></div>
                     </div>
                 `;
-            }
+            });
             container.innerHTML = qHTML;
         }
 
-        function answerUQ(uNum, qNum, btnIdx, isCorrect) {
+        function answerUQ(uNum, qNum, btnIdx, correctIdx) {
             const btns = document.querySelectorAll(`.uq-${uNum}-${qNum}`);
             const fb = document.getElementById(`fb-uq-${uNum}-${qNum}`);
+            const isCorrect = (btnIdx === correctIdx);
+            
             btns.forEach((btn, idx) => {
                 btn.disabled = true;
-                if(idx === btnIdx) {
-                    btn.classList.add(isCorrect ? 'bg-emerald-600' : 'bg-rose-600', 'text-white');
+                if(idx === correctIdx) {
+                    btn.classList.add('bg-emerald-600', 'text-white');
+                } else if(idx === btnIdx && !isCorrect) {
+                    btn.classList.add('bg-rose-600', 'text-white');
                 }
             });
             fb.classList.remove('hidden');
             fb.classList.add(isCorrect ? 'text-emerald-400' : 'text-rose-400');
-            fb.innerHTML = isCorrect ? 'إجابة صحيحة! أحسنت 🎯' : 'إجابة خاطئة ❌';
+            fb.innerHTML = isCorrect ? 'إجابة صحيحة! أحسنت 🎯' : `إجابة خاطئة ❌ الإجابة الصحيحة هي: ${String.fromCharCode(65 + correctIdx)}`;
         }
 
-        // Render 40 Full Midterm Exam Questions
+        // Render 40 Questions Full Midterm Exam
         function renderFullExam() {
             const container = document.getElementById('full-exam-questions-container');
-            let examHTML = '';
+            let allExamQuestions = [];
             
-            for(let i = 1; i <= 40; i++) {
+            // Collect 8 questions from each of the 5 units = 40 total
+            for(let u = 1; u <= 5; u++) {
+                const uQs = unitQuestionsDB[u].slice(0, 8);
+                allExamQuestions = allExamQuestions.concat(uQs);
+            }
+
+            let examHTML = '';
+            allExamQuestions.forEach((qObj, qIdx) => {
+                const qNum = qIdx + 1;
                 examHTML += `
                     <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 space-y-2 text-xs">
-                        <p class="font-bold text-white">${i}. السؤال ${i} من 40 (Midterm Full Exam): أي مما يلي يمثل إجابة هذا السؤال حسب سلايدات المقرر؟</p>
+                        <p class="font-bold text-white">${qNum}. ${qObj.q}</p>
                         <div class="grid md:grid-cols-2 gap-2 font-mono">
-                            <button onclick="answerFullExam(${i}, 0, true)" class="fe-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">A) الإجابة النموذجية الصحيحة</button>
-                            <button onclick="answerFullExam(${i}, 1, false)" class="fe-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">B) خيار خاطئ</button>
-                            <button onclick="answerFullExam(${i}, 2, false)" class="fe-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">C) خيار غير دقيق</button>
-                            <button onclick="answerFullExam(${i}, 3, false)" class="fe-${i} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">D) فخ برمجي شائع</button>
+                            ${qObj.opts.map((opt, oIdx) => `
+                                <button onclick="answerFullExam(${qNum},${oIdx}, ${qObj.ans})" class="fe-${qNum} p-2.5 rounded bg-slate-800 hover:bg-slate-700 text-right">
+                                    ${String.fromCharCode(65 + oIdx)})${opt}
+                                </button>
+                            `).join('')}
                         </div>
-                        <div id="fb-fe-${i}" class="hidden font-bold pt-1"></div>
+                        <div id="fb-fe-${qNum}" class="hidden font-bold pt-1"></div>
                     </div>
                 `;
-            }
+            });
             container.innerHTML = examHTML;
         }
 
-        function answerFullExam(qNum, btnIdx, isCorrect) {
+        function answerFullExam(qNum, btnIdx, correctIdx) {
             const btns = document.querySelectorAll(`.fe-${qNum}`);
             const fb = document.getElementById(`fb-fe-${qNum}`);
+            const isCorrect = (btnIdx === correctIdx);
+            
             btns.forEach((btn, idx) => {
                 btn.disabled = true;
-                if(idx === btnIdx) {
-                    btn.classList.add(isCorrect ? 'bg-emerald-600' : 'bg-rose-600', 'text-white');
+                if(idx === correctIdx) {
+                    btn.classList.add('bg-emerald-600', 'text-white');
+                } else if(idx === btnIdx && !isCorrect) {
+                    btn.classList.add('bg-rose-600', 'text-white');
                 }
             });
             fb.classList.remove('hidden');
             fb.classList.add(isCorrect ? 'text-emerald-400' : 'text-rose-400');
-            fb.innerHTML = isCorrect ? 'إجابة صحيحة 🎯' : 'إجابة خاطئة ❌';
+            fb.innerHTML = isCorrect ? 'إجابة صحيحة 🎯' : `إجابة خاطئة ❌ الإجابة الصحيحة هي: ${String.fromCharCode(65 + correctIdx)}`;
         }
     </script>
 </body>
