@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة مادة البرمجة بلغة جافا - CS1701T</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Cairo', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">CS1701T: Computer Programming in Java</h1>
+                <p class="text-indigo-200 text-sm">مراجعة شاملة للمحاضرات (1 إلى 5) - جامعة أم القرى[cite: 1]</p>
+            </div>
+            <nav class="hidden md:flex space-x-reverse space-x-6 text-sm font-semibold">
+                <a href="#intro" class="hover:text-indigo-200 transition">الخوارزميات والجافا</a>
+                <a href="#variables" class="hover:text-indigo-200 transition">المتغيرات وأنواع البيانات</a>
+                <a href="#expressions" class="hover:text-indigo-200 transition">العمليات والتعابير</a>
+                <a href="#io" class="hover:text-indigo-200 transition">الإدخال والإخراج</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container mx-auto px-6 py-8 max-w-5xl">
+
+        <!-- Section 1: Intro & Algorithms -->
+        <section id="intro" class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">1. مقدمة الخوارزميات ولغة جافا (Algorithms & Java Intro)</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-indigo-50 p-4 rounded-xl">
+                    <h3 class="font-bold text-indigo-900 mb-2">ما هي الخوارزمية (Algorithm)؟</h3>
+                    <p class="text-sm text-gray-700">مجموعة من الخطوات المحدودة والمتسلسلة والواضحة لحل مشكلة معينة[cite: 106]. يتم تمثيلها إما بـ **Flowcharts** (مخططات تدفق رسومية) أو **Pseudocode** (شفرة وصفية بشرية)[cite: 106].</p>
+                </div>
+                <div class="bg-indigo-50 p-4 rounded-xl">
+                    <h3 class="font-bold text-indigo-900 mb-2">أنواع الأخطاء البرمجية (Programming Errors)</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li><strong class="text-red-600">Syntax Errors:</strong> أخطاء نحوية وقواعدية يكتشفها المترجم (Compiler) مثل نسيان (;)[cite: 122].</li>
+                        <li><strong class="text-yellow-600">Runtime Errors:</strong> أخطاء تظهر أثناء تشغيل البرنامج وتوقفه مفاجئاً مثل القسمة على صفر (0/)[cite: 123].</li>
+                        <li><strong class="text-blue-600">Logic Errors:</strong> أخطاء في منطق البرنامج تجعله يعمل بدون توقف ولكن يعطي نتائج خاطئة (الأصعب اكتشافاً)[cite: 124].</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-3">بيئة جافا والمكونات (JDK, JRE, JVM):</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-right border border-gray-200 rounded-lg">
+                    <thead class="bg-gray-100 text-gray-700">
+                        <tr>
+                            <th class="p-3 border">المكون</th>
+                            <th class="p-3 border">الوظيفة الأساسية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 border font-semibold">JVM (Java Virtual Machine)</td>
+                            <td class="p-3 border">يترجم وينفذ الـ Bytecode إلى لغة الآلة الخاصة بالجهاز[cite: 162].</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="p-3 border font-semibold">JRE (Java Runtime Environment)</td>
+                            <td class="p-3 border">يتكون من (JVM + المكتبات الأساسية) لتشغيل برامج جافا[cite: 179].</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border font-semibold">JDK (Java Development Kit)</td>
+                            <td class="p-3 border">يتكون من (JRE + أدوات المطور مثل المترجم Compiler) لكتابة وتطوير وبرمجة الجافا[cite: 180].</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: Variables & Data Types -->
+        <section id="variables" class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">2. المتغيرات وأنواع البيانات (Variables & Data Types)</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-2">أنواع البيانات البدائية (Primitive Types):</h3>
+                    <ul class="text-sm text-gray-700 space-y-2 bg-gray-50 p-4 rounded-xl border">
+                        <li><strong>الأعداد الصحيحة:</strong> <code class="bg-gray-200 px-1 rounded">byte</code>, <code class="bg-gray-200 px-1 rounded">short</code>, <code class="bg-gray-200 px-1 rounded">int</code> (الأكثر استخداماً), <code class="bg-gray-200 px-1 rounded">long</code>[cite: 80].</li>
+                        <li><strong>الأعداد العشرية:</strong> <code class="bg-gray-200 px-1 rounded">float</code>, <code class="bg-gray-200 px-1 rounded">double</code> (الأكثر دقة)[cite: 80].</li>
+                        <li><strong>الرموز:</strong> <code class="bg-gray-200 px-1 rounded">char</code> (لحرف واحد، يدعم Unicode)[cite: 80].</li>
+                        <li><strong>المنطقية:</strong> <code class="bg-gray-200 px-1 rounded">boolean</code> (تحمل قيمة <code class="text-indigo-600">true</code> أو <code class="text-indigo-600">false</code>)[cite: 80].</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-2">أنواع البيانات غير البدائية (Non-Primitive):</h3>
+                    <p class="text-sm text-gray-700 bg-gray-50 p-4 rounded-xl border">
+                        مثل <code class="bg-gray-200 px-1 rounded font-bold">String</code> (النصوص)، المصفوفات (Arrays)، والكلاسات المعرفة من قبل المستخدم[cite: 78]. تبدأ بحرف كبير (Uppercase) وتمتلك دوال جاهزة مثل <code class="text-indigo-600">length()</code>[cite: 79, 82].
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-r-4 border-yellow-400 p-4 rounded-lg">
+                <h4 class="font-bold text-yellow-800">قواعد تسمية المعرفات (Identifiers):</h4>
+                <p class="text-sm text-yellow-700 mt-1">تبدأ بحرف، أو علامة سفلية (_)، أو علامة ($)، ولا يجوز أن تبدأ برقم[cite: 84]. لغة جافا حساسة لحالة الأسطر (Case-sensitive)[cite: 85]. الأسماء الثابتة (Constants) تُكتب بأحرف كبيره بينها شرطة سفلية مثل <code class="bg-yellow-100 px-1 rounded">DAYS_PER_WEEK</code> وتعريفها كالتالي: <code class="bg-yellow-100 px-1 rounded">public static final double PI = 3.14159;</code>[cite: 38, 39].</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Expressions & Operators -->
+        <section id="expressions" class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">3. العمليات الحسابية والتعابير (Arithmetic & Expressions)</h2>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-50 p-4 rounded-xl border">
+                    <h4 class="font-bold text-indigo-800 mb-1">العمليات الحسابية</h4>
+                    <p class="text-xs text-gray-600">الجمع (+) والطرح (-) والضرب (*) والقسمة (/) وباقي القسمة (%)[cite: 46]. القسمة الصحيحة <code class="bg-gray-200 px-1 rounded">99 / 100</code> تساوي <code class="font-bold">0</code> لأنها تحذف الكسور[cite: 48].</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border">
+                    <h4 class="font-bold text-indigo-800 mb-1">الزيادة والنقصان</h4>
+                    <p class="text-xs text-gray-600">معاملات الزيادة والنقصان القبلي والبعدي (<code class="bg-gray-200 px-1 rounded">++count</code> أو <code class="bg-gray-200 px-1 rounded">count++</code>) لزيادة أو نقص القيمة بمقدار 1[cite: 58].</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border">
+                    <h4 class="font-bold text-indigo-800 mb-1">الأولويات (Precedence)</h4>
+                    <p class="text-xs text-gray-600">الأقواس أولاً، ثم الضرب والقسمة وباقي القسمة من اليسار لليمين، ثم الجمع والطرح[cite: 53].</p>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-2">التخزين المؤقت والتحويل (Type Casting):</h3>
+            <p class="text-sm text-gray-700 mb-2">يمكن تحويل نوع البيانات مؤقتاً عبر وضع النوع بين قوسين مثل:</p>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded-xl text-sm overflow-x-auto font-mono">double distance = 9.0;
+int points = (int)distance; // القيمة تصبح 9 ويتم قطع الكسر</pre>
+        </section>
+
+        <!-- Section 4: Input/Output & Scanner -->
+        <section id="io" class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
+            <h2 class="text-2xl font-bold text-indigo-700 mb-4 border-b pb-2">4. الإخراج والإدخال الأساسي (Basic Input/Output & Scanner)</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-2">استخدام كلاس Scanner للإدخال:</h3>
+                    <pre class="bg-gray-900 text-green-400 p-4 rounded-xl text-xs overflow-x-auto font-mono mb-3">import java.util.Scanner; // 1. الاستيراد
+
+Scanner keyboard = new Scanner(System.in); // 2. التهيئة
+int age = keyboard.nextInt(); // قراءة عدد صحيح
+String name = keyboard.next(); // قراءة كلمة</pre>
+                    <p class="text-xs text-gray-600">من الدوال الشهيرة: <code class="bg-gray-200 px-1 rounded">next()</code>، <code class="bg-gray-200 px-1 rounded">nextLine()</code>، <code class="bg-gray-200 px-1 rounded">nextDouble()</code>[cite: 4].</p>
+                </div>
+
+                <div class="bg-red-50 border border-red-200 p-4 rounded-xl">
+                    <h3 class="font-bold text-red-800 mb-2">⚠️ تنبيه هامة جداً لـ nextLine():</h3>
+                    <p class="text-xs text-red-700 mb-2">عند قراءة رقم (مثل <code class="bg-red-100 px-1 rounded">nextInt()</code>) ثم متبوعاً بنص (مثل <code class="bg-red-100 px-1 rounded">nextLine()</code>)، يبقى رمز الانتقال للسطر التالي (<code class="bg-red-100 px-1 rounded">\n</code>) في الذاكرة المؤقتة، مما يتسبب في قراءة نص فارغ <code class="bg-red-100 px-1 rounded">""</code>[cite: 9, 10].</p>
+                    <p class="text-xs font-bold text-red-900">الحل:</p>
+                    <pre class="bg-gray-900 text-green-400 p-2 rounded text-xs mt-1 font-mono">int n = keyboard.nextInt();
+keyboard.nextLine(); // امتصاص السطر الفارغ
+String text = keyboard.nextLine();</pre>
+                </div>
+            </div>
+
+            <h3 class="font-bold text-gray-800 mb-2">التنسيق المتقدم باستخدام printf:</h3>
+            <p class="text-sm text-gray-700 mb-2">يتيح التحكم في عدد المنازل العشرية ومحاذاة النصوص والأرقام:</p>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded-xl text-sm overflow-x-auto font-mono">double price = 19.57;
+System.out.printf("Price: %6.1f", price); // الناتج:   19.6 (بعرض 6 خانات ومنزلة عشرية واحدة)</pre>
+            <ul class="text-xs text-gray-600 mt-2 space-y-1">
+                <li><code class="bg-gray-200 px-1 rounded">%d</code> للأعداد الصحيحة، <code class="bg-gray-200 px-1 rounded">%f</code> للأعداد العشرية، <code class="bg-gray-200 px-1 rounded">%s</code> للنصوص[cite: 21].</li>
+                <li>العلامات: <code class="bg-gray-200 px-1 rounded">+</code> لإظهار الإشارة، <code class="bg-gray-200 px-1 rounded">-</code> للمحاذاة لليسار، <code class="bg-gray-200 px-1 rounded">0</code> للتعبئة بالأصفار[cite: 23].</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p class="text-sm">تم تصميم هذه الصفحة خصيصاً لمراجعة مقرر البرمجة بلغة جافا (CS1701T) - جامعة أم القرى[cite: 1]. بالتوفيق في الاختبارات!</p>
+    </footer>
+
+</body>
+</html>
